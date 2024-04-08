@@ -6,3 +6,4 @@ beautifulsoup4~=4.12.3
 selenium~=4.17.2
 gunicorn==21.2.0
 Flask-SQLAlchemy==3.1.1
+
