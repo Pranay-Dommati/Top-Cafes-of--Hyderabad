@@ -1,0 +1,52 @@
+{% include "header.html" %}
+
+<div class="container py-4">
+    <main>
+        <div class="row g-5 px-5">
+            <div class="col-lg-6 py-4" style="background-color: #FEC7B4; border-radius: 15px;">
+                <h4 class="mb-3">Get In Touch</h4>
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ category }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                <form id="contactForm" class="needs-validation" method="post">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label for="Name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="Name" name="Name" placeholder="Your Name" required>
+                            <div class="invalid-feedback">
+                                Valid Name is required.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="Email" placeholder="Your Email" required>
+                            <div class="invalid-feedback">
+                                Valid Email is required.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="Message" style="height: 220px;" placeholder="Your Message" required></textarea>
+                            <div class="invalid-feedback">
+                                Please Enter a message.
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3" style="background-color: #FC819E; color: #FFF3C7; border-color: #FC819E;">Submit</button>
+                </form>
+                <div id="submissionResult"></div>
+            </div>
+            <div class="col-lg-6 py-4">
+                <img src="{{ url_for('static', filename='email_img.png') }}" alt="Your Image" class="img-fluid element" style="max-width: 100%; height: auto; padding-left:50px">
+            </div>
+        </div>
+    </main>
+</div>
+
+{% include "footer.html" %}

@@ -1,0 +1,115 @@
+header {
+    background-color : #E5D4FF
+}
+
+
+
+.dancing-script-unique {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.text-color {
+  position: relative;
+}
+
+.text-color::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjust the distance from text */
+  width: 100%;
+  height: 5px; /* Thickness of the line */
+  background: linear-gradient(to right, transparent 40%, #000 50%, transparent 60%);
+  border-radius: 10px; /* Adjust the border-radius for curve effect */
+  animation: wave 2s infinite linear alternate; /* Adjust animation duration and timing */
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(20px); /* Adjust the horizontal movement of the wave */
+  }
+}
+
+
+
+@media (max-width: 400px) {
+    /* Styles for small screens */
+    #navbar {
+        text-align: center;
+    }
+    .cup-img {
+        width: 300px;
+        height: 300px; /* Let the height adjust automatically */
+    }
+    .title-name {
+        font-size: 21px;
+        padding-bottom:10px/* Adjust size as needed */
+    }
+    .cafe-temps {
+        margin-top:45px;
+    }
+    .cafe-temps-text {
+    font-size: 30px
+    }
+    .outer-cover {
+    padding-top: 43px
+    }
+}
+
+@media (min-width: 401px) {
+    .title-name {
+        font-size: 33px;
+        height: 70px;
+    }
+    .cup-img {
+        margin-left: 50px/* Let the height adjust automatically */
+    }
+    .cafe-temps-text {
+    font-size: 35px
+    }
+    .outer-cover {
+    padding-top: 35px
+    }
+
+}
+
+
+@media (min-width: 1366px) {
+    /* Styles for screens wider than the HP Pavilion x360 */
+    #navbar {
+        text-align: center;
+    }
+    .cup-img {
+        width: 570px;
+        height: 570px;
+        margin-left: 80px/* Let the height adjust automatically */
+    }
+    .title-name {
+        font-size: 37px; /* Adjust size as needed */
+    }
+    .cafe-temps-text {
+    font-size: 35px
+    }
+    .outer-cover {
+    padding-top: 39px
+    }
+}
+
+
+.anchor-tag {
+        color: inherit; /* Inherit color from parent element */
+        text-decoration: none; /* Remove underline if desired */
+    }
+
+    /* Change link color on hover */
+    .anchor-tag:hover {
+        color: blue; /* Change color on hover */
+        /* Additional styles if desired */
+    }
